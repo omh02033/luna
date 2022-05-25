@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      background: #000000aa;
+    }
+    #parent {
+      width: 30%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    #it {
+      border: 0;
+      outline: none;
+      border-bottom: 3px solid #ffffff33;
+      padding: 5px;
+      transition: all .2s ease;
+      width: 100%;
+      background: none;
+      color: #fff;
+    }
+    #it:focus {
+      border-bottom: 3px solid #ffffffaa;
+    }
+    #text {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      transition: all .2s ease;
+      color: #ffffff33;
+    }
+    #it:focus + #text {
+      top: -16px;
+      left: 5px;
+      font-size: 12px;
+      color: #ffffffaa;
+    }
+  </style>
+</head>
+<body>
+  <div id="parent">
+    <input type="text" name="" id="it">
+    <label for="it" id="text">검색</label>
+  </div>
+</body>
+</html>
